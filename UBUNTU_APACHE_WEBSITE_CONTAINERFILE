@@ -1,0 +1,20 @@
+# Containerfile to build an Apache web server image for a website template using Ubuntu.
+
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update \
+    && apt install -y apache2 wget unzip \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /var/www/html
+
+RUN wget -O /tmp/hielo.zip https://templated.live/hielo/download/hielo.zip \
+    && unzip /tmp/hielo.zip -d /var/www/html \
+    && rm -f /tmp/hielo.zip
+
+EXPOSE 80
+
+CMD ["apache2ctl", "-D", "FOREGROUND"]
