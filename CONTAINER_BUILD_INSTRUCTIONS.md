@@ -2,7 +2,7 @@
 
 This file explains a simple way to build and run a container image.
 
-## 1. Create a Containerfile
+## 1. Create a Containerfile.
 
 A `Containerfile` (or `Dockerfile`) defines how the image is built.
 
