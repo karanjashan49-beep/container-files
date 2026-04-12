@@ -18,3 +18,4 @@ RUN wget -O /tmp/hielo.zip https://templated.live/hielo/download/hielo.zip \
 EXPOSE 80
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
+
