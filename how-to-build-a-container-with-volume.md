@@ -5,7 +5,7 @@ A Docker volume lets you persist data outside the container. This means your dat
 
 ## Prerequisites
 - Docker installed
-- Basic knowledge of Docker commands
+- Basic knowledge of Docker commands.
 - A project directory with a `Dockerfile`
 
 ## Example Dockerfile
